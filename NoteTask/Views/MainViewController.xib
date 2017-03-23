@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="NoteTask" customModuleProvider="target">
+            <connections>
+                <outlet property="tblNotes" destination="JbY-cy-plc" id="f2I-R1-sHB"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hKd-Mg-haq">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jkc-Wd-QeQ">
+                            <rect key="frame" x="0.0" y="13" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="6Bh-Yc-Kri"/>
+                                <constraint firstAttribute="height" constant="50" id="YWl-hc-SID"/>
+                            </constraints>
+                            <state key="normal" image="ic_notify"/>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dfx-id-Jfq">
+                            <rect key="frame" x="0.0" y="63" width="375" height="1"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="78d-of-ljh"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NOTE TASK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJ3-Bf-oOi">
+                            <rect key="frame" x="142" y="29" width="91" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFH-bH-nCs">
+                            <rect key="frame" x="325" y="14" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="01Z-1L-sxJ"/>
+                                <constraint firstAttribute="width" constant="50" id="iwX-dd-rVX"/>
+                            </constraints>
+                            <state key="normal" image="ic_add_new_note"/>
+                            <connections>
+                                <action selector="createNewNote:" destination="-1" eventType="touchUpInside" id="suN-jV-gZD"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="dfx-id-Jfq" firstAttribute="top" secondItem="Jkc-Wd-QeQ" secondAttribute="bottom" id="IdC-0u-4jS"/>
+                        <constraint firstItem="tJ3-Bf-oOi" firstAttribute="centerY" secondItem="hKd-Mg-haq" secondAttribute="centerY" constant="7" id="KNA-aA-s4o"/>
+                        <constraint firstAttribute="height" constant="64" id="Nsj-qb-8pe"/>
+                        <constraint firstItem="dfx-id-Jfq" firstAttribute="leading" secondItem="hKd-Mg-haq" secondAttribute="leading" id="Qg3-5X-AVq"/>
+                        <constraint firstAttribute="bottom" secondItem="dfx-id-Jfq" secondAttribute="bottom" id="bee-p7-xrg"/>
+                        <constraint firstAttribute="bottom" secondItem="oFH-bH-nCs" secondAttribute="bottom" id="gdv-bM-Rul"/>
+                        <constraint firstItem="tJ3-Bf-oOi" firstAttribute="centerX" secondItem="hKd-Mg-haq" secondAttribute="centerX" id="nEz-Fg-Wrj"/>
+                        <constraint firstItem="Jkc-Wd-QeQ" firstAttribute="leading" secondItem="hKd-Mg-haq" secondAttribute="leading" id="qPd-Nf-bbc"/>
+                        <constraint firstAttribute="trailing" secondItem="dfx-id-Jfq" secondAttribute="trailing" id="vdQ-IE-iKc"/>
+                        <constraint firstAttribute="trailing" secondItem="oFH-bH-nCs" secondAttribute="trailing" id="zHA-Sg-lvM"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RZb-yj-g3O">
+                    <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_empty_note" translatesAutoresizingMaskIntoConstraints="NO" id="d1x-lV-Wjv">
+                            <rect key="frame" x="120" y="113" width="135" height="178"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="178" id="bhC-L0-bQV"/>
+                                <constraint firstAttribute="width" constant="135" id="eax-wh-k6C"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sRb-cQ-6jB" customClass="ButtonRoundCorner" customModule="NoteTask" customModuleProvider="target">
+                            <rect key="frame" x="109" y="390.5" width="157" height="40"/>
+                            <color key="backgroundColor" red="0.20392156859999999" green="0.66274509800000003" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="Fz8-Iy-EY8"/>
+                                <constraint firstAttribute="width" constant="157" id="seP-0x-lIT"/>
+                            </constraints>
+                            <state key="normal" title="Add New Note">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="addNewNote:" destination="-1" eventType="touchUpInside" id="mDh-od-ZSq"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Empty Note" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3l-jd-rp4">
+                            <rect key="frame" x="144" y="311" width="88" height="20"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add first note by click to Add New Note Button" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLG-Pm-0zw">
+                            <rect key="frame" x="88" y="339" width="200" height="31.5"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="200" id="Wnf-qV-KfF"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="O3l-jd-rp4" firstAttribute="top" secondItem="d1x-lV-Wjv" secondAttribute="bottom" constant="20" id="4Mw-y2-i7H"/>
+                        <constraint firstItem="d1x-lV-Wjv" firstAttribute="centerX" secondItem="RZb-yj-g3O" secondAttribute="centerX" id="AJg-NA-6B8"/>
+                        <constraint firstItem="O3l-jd-rp4" firstAttribute="centerX" secondItem="RZb-yj-g3O" secondAttribute="centerX" id="GAG-UD-cPc"/>
+                        <constraint firstItem="d1x-lV-Wjv" firstAttribute="centerY" secondItem="RZb-yj-g3O" secondAttribute="centerY" constant="-100" id="PGz-7i-xqt"/>
+                        <constraint firstItem="sRb-cQ-6jB" firstAttribute="top" secondItem="oLG-Pm-0zw" secondAttribute="bottom" constant="20" id="W4i-44-VK9"/>
+                        <constraint firstItem="oLG-Pm-0zw" firstAttribute="top" secondItem="O3l-jd-rp4" secondAttribute="bottom" constant="8" id="pV9-yE-Acd"/>
+                        <constraint firstItem="sRb-cQ-6jB" firstAttribute="centerX" secondItem="RZb-yj-g3O" secondAttribute="centerX" id="v0z-z6-g5w"/>
+                        <constraint firstItem="oLG-Pm-0zw" firstAttribute="centerX" secondItem="RZb-yj-g3O" secondAttribute="centerX" id="w9Z-j6-DkK"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JbY-cy-plc">
+                    <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="JbY-cy-plc" firstAttribute="leading" secondItem="RZb-yj-g3O" secondAttribute="leading" id="K4K-bm-582"/>
+                <constraint firstItem="hKd-Mg-haq" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="RCn-tJ-lXy"/>
+                <constraint firstItem="JbY-cy-plc" firstAttribute="trailing" secondItem="RZb-yj-g3O" secondAttribute="trailing" id="T3c-6f-dFC"/>
+                <constraint firstItem="RZb-yj-g3O" firstAttribute="top" secondItem="hKd-Mg-haq" secondAttribute="bottom" id="aAf-6B-GLZ"/>
+                <constraint firstItem="hKd-Mg-haq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="kRc-Vh-tUK"/>
+                <constraint firstAttribute="trailing" secondItem="hKd-Mg-haq" secondAttribute="trailing" id="kTd-iK-gko"/>
+                <constraint firstItem="JbY-cy-plc" firstAttribute="top" secondItem="RZb-yj-g3O" secondAttribute="top" id="n39-Nu-LRD"/>
+                <constraint firstItem="RZb-yj-g3O" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="pGJ-ib-ybg"/>
+                <constraint firstItem="JbY-cy-plc" firstAttribute="bottom" secondItem="RZb-yj-g3O" secondAttribute="bottom" id="pex-LU-eQo"/>
+                <constraint firstAttribute="bottom" secondItem="RZb-yj-g3O" secondAttribute="bottom" id="z4O-X3-c29"/>
+                <constraint firstAttribute="trailing" secondItem="RZb-yj-g3O" secondAttribute="trailing" id="zJI-6b-bdq"/>
+            </constraints>
+            <point key="canvasLocation" x="-424" y="13"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_add_new_note" width="22" height="22"/>
+        <image name="ic_empty_note" width="135" height="187"/>
+        <image name="ic_notify" width="18" height="22"/>
+    </resources>
+</document>
